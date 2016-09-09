@@ -1,0 +1,187 @@
+body {
+    font-family: "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Source Han Sans CN", "Source Han Sans SC", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
+}
+
+.WB_feed_detail {
+    padding: 0px;
+}
+
+.WB_feed_detail .WB_screen {
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+.WB_feed_detail .WB_face {
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.WB_detail {
+    margin: 0;
+}
+
+.WB_detail .WB_detail {
+    margin: 0px;
+}
+
+.WB_detail .WB_info, .WB_detail .WB_from {
+    margin-left: 90px;
+}
+
+.WB_detail .WB_info {
+    padding-top: 25px;
+}
+
+.WB_detail .WB_text {
+    margin: 20px;
+}
+
+.WB_feed_expand .WB_expand {
+    margin: 0;
+    padding: 0;
+}
+
+.WB_feed_expand .WB_expand .WB_info {
+    margin-left: 20px;
+    padding-top: 20px;
+}
+
+.WB_feed_expand .WB_expand .WB_text {
+    margin: 10px 20px;
+}
+
+.WB_feed_expand .WB_expand .WB_func {
+    margin-bottom: 0;
+}
+
+.WB_feed_expand .WB_expand .WB_func .WB_handle {
+    margin-right: 20px;
+}
+
+.WB_feed_expand .WB_expand .WB_func .WB_from {
+    margin-left: 20px;
+    padding-bottom: 8px;
+}
+
+.media_box {
+    width: 100%;
+}
+
+.media_box .WB_media_a_m1 {
+    margin-left: 20px;
+}
+
+.media_box .WB_media_a_m2, .media_box .WB_media_a_m3, .media_box .WB_media_a_m4, .media_box .WB_media_a_m5, .media_box .WB_media_a_m6, .media_box .WB_media_a_m7, .media_box .WB_media_a_m8, .media_box .WB_media_a_m9 {
+    width: 100%;
+}
+
+.media_box .WB_media_a_m2 .WB_pic {
+    width: 298px;
+    height: 298px;
+}
+
+.media_box .WB_media_a_m3 .WB_pic, .media_box .WB_media_a_m6 .WB_pic, .media_box .WB_media_a_m9 .WB_pic {
+    width: 198px;
+    height: 198px;
+}
+
+.media_box .WB_media_a_m4 .li_1 {
+    width: 448px;
+    height: 448px;
+}
+
+.media_box .WB_media_a_m4 .li_2, .media_box .WB_media_a_m4 .li_3, .media_box .WB_media_a_m4 .li_4 {
+    width: 148px;
+    height: 148px;
+}
+
+.media_box .WB_media_a_m5 .li_1, .media_box .WB_media_a_m5 .li_2 {
+    width: 298px;
+    height: 298px
+;
+}
+
+.media_box .WB_media_a_m5 .li_3, .media_box .WB_media_a_m5 .li_4, .media_box .WB_media_a_m5 .li_5 {
+    width: 198px;
+    height: 198px;
+}
+
+.media_box .WB_media_a_m7 .li_1 {
+    width: 398px;
+    height: 398px;
+}
+
+.media_box .WB_media_a_m7 .li_2, .media_box .WB_media_a_m7 .li_3 {
+    width: 198px;
+    height: 198px;
+}
+
+.media_box .WB_media_a_m7 .li_4, .media_box .WB_media_a_m7 .li_5, .media_box .WB_media_a_m7 .li_6, .media_box .WB_media_a_m7 .li_7 {
+    width: 148px;
+    height: 148px;
+}
+
+.media_box .WB_media_a_m8 .li_1 {
+    width: 448px;
+    height: 448px;
+}
+
+.media_box .WB_media_a_m8 .li_2, .media_box .WB_media_a_m8 .li_3, .media_box .WB_media_a_m8 .li_4, .media_box .WB_media_a_m8 .li_5, .media_box .WB_media_a_m8 .li_6, .media_box .WB_media_a_m8 .li_7, .media_box .WB_media_a_m8 .li_8 {
+    width: 148px;
+    height: 148px;
+}
+
+.WB_expand_media_box {
+    margin: 0;
+}
+
+.WB_expand_media_box .WB_expand_media {
+    padding: 10px 20px;
+}
+
+.WB_expand_media_box .WB_expand_media .WB_media_view {
+    width: 100%;
+}
+
+.WB_expand_media_box .WB_expand_media .WB_media_view .media_show_box li {
+    width: 100%;
+}
+
+.WB_expand_media_box .WB_expand_media .WB_media_view .artwork_box {
+    width: 100%;
+}
+
+.WB_feed_handle .WB_feed_together .wft_hd {
+    margin-left: 20px;
+    margin-right: 20px
+;
+}
+
+.WB_feed_handle .WB_feed_together .wft_hd .wft_info {
+    padding-right: 10px;
+}
+
+.WB_feed_handle .WB_feed_together .WB_sonFeed .WB_feed_detail {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.WB_feed_handle .WB_feed_together .WB_sonFeed .WB_face {
+    margin: 0;
+    padding: 0;
+    margin-top: 3px;
+}
+
+.WB_feed_handle .WB_feed_together .WB_sonFeed .WB_detail {
+    margin-bottom: 10px;
+}
+
+.WB_feed_handle .WB_feed_together .WB_sonFeed .WB_detail .WB_text {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.WB_feed_handle .WB_feed_together .WB_sonFeed .WB_detail .WB_func .WB_from {
+    margin-left: 50px;
+}
+

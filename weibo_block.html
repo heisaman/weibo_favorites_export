@@ -1,0 +1,57 @@
+{% for f in site.data.favorites %}
+<div class="WB_face W_fl">
+    <div class="face">
+        <img usercard="id=3369755644&amp;refer_flag=" title="" alt="" width="50" height="50" src="{{f.status.user.profile_image_url}}" class="W_face_radius">
+    </div>
+</div>
+<div class="WB_detail">
+    <div class="WB_info">
+        <a suda-uatrack="key=feed_headnick&amp;value=pubuser_nick:4017819366758684" target="_blank" class="W_f14 W_fb S_txt1" nick-name=""
+            title="" href="" usercard="id=3369755644&amp;refer_flag=">{{f.status.user.name}}</a>
+        <a target="_blank" href="http://huodong.weibo.com/travel2016?ref=icon " title="带着微博去旅行"><i class="W_icon icon_airball"></i></a>
+    </div>
+    <!--    <div class="WB_from S_txt2">
+        <a target="_blank" href="/3369755644/E7tyUsmf2?ref=collection" title="2016-09-09 15:30" date="1473406247000" class="S_txt2"
+            node-type="feed_list_item_date" suda-data="key=tblog_home_new&amp;value=feed_time:4017819366758684">今天 15:30</a>        来自 <a class="S_txt2" suda-data="key=tblog_home_new&amp;value=feed_come_from" action-type="app_source" target="_blank"
+            href="http://app.weibo.com/t/feed/6vtZb0" rel="nofollow">微博 weibo.com</a> </div>   -->
+    <div class="WB_text W_f14" node-type="feed_list_content">
+        {{f.status.text}} </div>
+    {% if f.status.retweeted_status %}
+    <div class="WB_feed_expand">
+        <div class="W_arrow_bor W_arrow_bor_t"><i class="S_bg1_br"></i></div>
+        <div class="WB_expand S_bg1" node-type="feed_list_forwardContent">
+            <div class="WB_info">
+                <a target="_blank" suda-uatrack="key=feed_headnick&amp;value=transuser_nick:4017499345626797" class="W_fb S_txt1" node-type="feed_list_originNick"
+                    nick-name="" href="" title="" usercard="id=5433674303&amp;refer_flag=">{{f.status.retweeted_status.user.name}}</a>
+                <a target="_blank" href="http://huodong.weibo.com/travel2016?ref=icon " title="带着微博去旅行"><i class="W_icon icon_airball"></i></a>
+            </div>
+            <div class="WB_text" node-type="feed_list_reason">
+                {{f.status.retweeted_status.text}}
+            </div>
+            <!-- 微博心情，独立于标准的ul节点 -->
+
+            <div class="WB_media_wrap clearfix" node-type="feed_list_media_prev">
+                <div class="media_box">
+                    <!--图片个数等于1，只显示图片-->
+
+                    <!--picture_count == 1-->
+                    <ul class="WB_media_a  WB_media_a_m1 clearfix">
+                        <li class="WB_pic li_1 S_bg1 S_line2 bigcursor li_n_mix_w" action-data="pid=005VJ8U7jw1f7mcgyvdtcj30xy0v4n6h&amp;object_ids=1042018%3A956db3dfeb0400bc26d9e664024ca036&amp;photo_tag_pids=&amp;uid=5433674303&amp;mid=4017499345626797&amp;pic_ids=005VJ8U7jw1f7mcgyvdtcj30xy0v4n6h&amp;pic_objects="
+                            action-type="feed_list_media_img" suda-uatrack="key=tblog_newimage_feed&amp;value=image_feed_unfold:4017499345626797:005VJ8U7jw1f7mcgyvdtcj30xy0v4n6h">
+                            <img src="{{f.status.retweeted_status.bmiddle_pic}}">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    {% endif %}
+    <!-- feed区组件_收藏tag -->
+    <div class="WB_tag WB_tag_v2  clearfix S_txt2">
+        <span class="W_fr">收藏于{{f['favorited_time']}}</span>
+    </div>
+    <!-- /feed区组件_收藏tag -->
+</div>
+{% endfor %}
+<script src="https://gist.github.com/beta/fc2d7c7524579d218723.css"></script>
