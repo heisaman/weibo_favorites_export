@@ -67,7 +67,8 @@ def create_message(sender, to, subject, message_text):
     message['to'] = to
     message['from'] = sender
     message['subject'] = subject
-    return {'raw': base64.urlsafe_b64encode(message.as_string())}
+    return {'raw': base64.urlsafe_b64encode(
+        message.as_string().encode('utf-8')).decode('utf-8')}
 
 
 def send_message(service, user_id, message):
