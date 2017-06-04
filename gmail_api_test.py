@@ -1,8 +1,10 @@
 from __future__ import print_function
+from email.mime.text import MIMEText
+import base64
 import httplib2
 import os
 
-from apiclient import discovery
+from apiclient import discovery, errors
 from oauth2client import client
 from oauth2client import tools
 from oauth2client.file import Storage
@@ -43,10 +45,52 @@ def get_credentials():
         flow.user_agent = APPLICATION_NAME
         if flags:
             credentials = tools.run_flow(flow, store, flags)
-        else: # Needed only for compatibility with Python 2.6
+        else:  # Needed only for compatibility with Python 2.6
             credentials = tools.run(flow, store)
         print('Storing credentials to ' + credential_path)
     return credentials
+
+
+def create_message(sender, to, subject, message_text):
+    """Create a message for an email.
+
+    Args:
+    sender: Email address of the sender.
+    to: Email address of the receiver.
+    subject: The subject of the email message.
+    message_text: The text of the email message.
+
+    Returns:
+    An object containing a base64url encoded email object.
+    """
+    message = MIMEText(message_text)
+    message['to'] = to
+    message['from'] = sender
+    message['subject'] = subject
+    return {'raw': base64.urlsafe_b64encode(message.as_string())}
+
+
+def send_message(service, user_id, message):
+    """Send an email message.
+
+    Args:
+    service: Authorized Gmail API service instance.
+    user_id: User's email address. The special value "me"
+    can be used to indicate the authenticated user.
+    message: Message to be sent.
+
+    Returns:
+    Sent Message.
+    """
+    try:
+        message = (service.users().messages()
+                   .send(userId=user_id, body=message)
+                   .execute())
+        print('Message Id: %s' % message['id'])
+        return message
+    except errors.HttpError as error:
+        print('An error occurred: %s' % error)
+
 
 def main():
     """Shows basic usage of the Gmail API.
@@ -58,15 +102,19 @@ def main():
     http = credentials.authorize(httplib2.Http())
     service = discovery.build('gmail', 'v1', http=http)
 
-    results = service.users().labels().list(userId='me').execute()
+    """results = service.users().labels().list(userId='me').execute()
     labels = results.get('labels', [])
 
     if not labels:
         print('No labels found.')
     else:
-      print('Labels:')
-      for label in labels:
-        print(label['name'])
+        print('Labels:')
+        for label in labels:
+            print(label['name'])
+    """
+    message = create_message('heyuwei.efrei@gmail.com',
+                             'heyuwei0305@126.com', 'test', 'Hello World!')
+    print(send_message(service, 'heyuwei.efrei@gmail.com', message))
 
 
 if __name__ == '__main__':
