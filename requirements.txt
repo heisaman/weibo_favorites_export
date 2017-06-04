@@ -1,3 +1,4 @@
-weibo
-Celery
-pymongo
+weibo==0.2.2
+Celery==4.0.2
+pymongo==3.4.0
+google-api-python-client==1.6.2
